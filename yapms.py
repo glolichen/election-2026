@@ -5,7 +5,7 @@ GEN_BALLOT = 8.53
 with open("yapmsbase.json", "r") as file:
     yapms = json.load(file)
 
-with open("cpvi2026-2.csv", "r") as file:
+with open("cpvi2026.csv", "r") as file:
     lines = file.readlines()
 
 # 0 = safe, 1 = likely, etc
@@ -36,7 +36,7 @@ for line in lines:
         print(f"Flip! {split[0]}, {current}->{next}, {margin:.1f}")
 
     margin_num = 0
-    if marginabs <= 1:
+    if marginabs <= 2:
         margin_num = 3
     elif marginabs <= 5:
         margin_num = 2
