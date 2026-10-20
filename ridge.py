@@ -172,6 +172,9 @@ for rank, result in enumerate(results, start=1):
             f"error {predicted-actual:+.2f}"
         )
 
+    print("   Coeffs:", result["coefficients"])
+    print("   Intercept:", result["intercept"])
+
 for result in results:
     names = "+".join(result["names"])
     print(f"{names}: {margin_to_str(result['prediction_2026'])}, RMSE {result['rmse']:.3f}, MAE {result['mae']:.3f}")
